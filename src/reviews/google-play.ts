@@ -66,14 +66,12 @@ export class GooglePlay {
       credentials: this.appStoreConf.publisherJson,
     });
     try {
-      const response = await google
-        .androidpublisher('v3')
-        .reviews.list({
-          auth: tokens,
-          packageName: this.appStoreConf.appId,
-          startIndex: 1,
-          maxResults: 100,
-        });
+      const response = await google.androidpublisher('v3').reviews.list({
+        auth: tokens,
+        packageName: this.appStoreConf.appId,
+        startIndex: 1,
+        maxResults: 100,
+      });
       if (this.commonConf.verbose) {
         console.log(
           `INFO: [${this.appStoreConf.appId}] Received reviews from Google Play`,
@@ -99,8 +97,8 @@ export class GooglePlay {
           osVersion: osVersion,
           device: device,
           title: undefined,
-          text: comment?.text!,  // eslint-disable-line @typescript-eslint/no-non-null-asserted-optional-chain
-          rating: comment?.starRating!,  // eslint-disable-line @typescript-eslint/no-non-null-asserted-optional-chain
+          text: comment?.text!, // eslint-disable-line @typescript-eslint/no-non-null-asserted-optional-chain
+          rating: comment?.starRating!, // eslint-disable-line @typescript-eslint/no-non-null-asserted-optional-chain
           author: review.authorName!,
           link: `https://play.google.com/store/apps/details?id=${this.appStoreConf.appId}&reviewId=${review.reviewId}`,
           storeName: 'Google Play',
