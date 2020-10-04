@@ -136,11 +136,13 @@ export class AppStore {
       );
       const that = this; // eslint-disable-line @typescript-eslint/no-this-alias
       const reviews = entries
-        .filter(function (review: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .filter(function (review: any) {
           return !review.hasOwnProperty('im:name'); // eslint-disable-line no-prototype-builtins
         })
         .reverse()
-        .map(function (review: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .map(function (review: any) {
           return that.parseAppStoreReview(region, review, appInformation);
         });
       return Promise.resolve(reviews);
