@@ -52,7 +52,5 @@ async function delay(ms: number) {
 
 loop();
 
-// TODO: GitHub Actions ESLint
-// TODO: GitHub Actions npm publish
 // TODO: 別のチャット
 // TODO: add help
