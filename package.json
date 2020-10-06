@@ -1,6 +1,6 @@
 {
   "name": "app-reviews-to-chat",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node.js library for posting App Store and Google Play app reviews to Slack.",
   "main": "./dist/index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "posttest": "npm run lint",
     "prestart": "npm run build",
     "start": "node -r source-map-support/register .",
-    "prepublishOnly": "npm run lint"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
