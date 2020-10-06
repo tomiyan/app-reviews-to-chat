@@ -1,4 +1,3 @@
-import commandLineArgs from "command-line-args";
 import { Config } from "./config";
 import { AppStore } from "./reviews/app-store";
 import { GooglePlay } from "./reviews/google-play";
@@ -7,14 +6,7 @@ import { File } from "./state/storage/file";
 import { Constants } from "./constants";
 import { Database } from "./state/storage/database";
 
-const optionDefnitions: commandLineArgs.OptionDefinition[] = [
-    { name: 'config', alias: 'c', type: String, defaultOption: true }
-];
-
-const options = commandLineArgs(optionDefnitions);
-const config = new Config(options.config);
-
-async function main() {
+async function main(config: Config) {
     let storage;
     if (config.common.storage === 'file') {
         storage = new File(config.common);
@@ -34,11 +26,11 @@ async function main() {
     await storage.save(state.state);
 }
 
-async function loop() {
+export async function loop(config: Config) {
     const interval = config.common.interval || Constants.DEFAULT_INTERVAL_SECONDS;
     while(true) {
         try {
-            await main();
+            await main(config);
         } catch (error) {
             console.error(error);
         }
@@ -49,8 +41,6 @@ async function loop() {
 async function delay(ms: number) {
     return await new Promise(resolve => setTimeout(resolve, ms));
 }
-
-loop();
 
 // TODO: 別のチャット
 // TODO: add help

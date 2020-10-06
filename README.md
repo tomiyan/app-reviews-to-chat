@@ -13,7 +13,7 @@ npm install -g app-reviews-to-chat
 ## Usage
 
 ```bash
-app-reviews-to-chat ~/config.json
+GOOGLE_PLAY_PUBLISHER_KEY=`jq -c . ./key.json` app-reviews-to-chat ~/config.json
 ```
 
 ### Config
