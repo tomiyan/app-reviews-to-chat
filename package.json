@@ -17,7 +17,7 @@
     "posttest": "npm run lint",
     "prestart": "npm run build",
     "start": "node -r source-map-support/register .",
-    "prepublishOnly": "npm run lint"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
