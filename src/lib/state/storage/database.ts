@@ -33,7 +33,14 @@ export class Database implements StateStorage {
     private sequelize: Sequelize;
 
     constructor(private common: Common) {
-        this.sequelize = new Sequelize(common.storage);
+        this.sequelize = new Sequelize(common.storage, {
+            dialectOptions: {
+                ssl: {
+                    require: true,
+                    rejectUnauthorized: false,
+                }
+            },
+        });
         Status.init(
             {
                 type: {
