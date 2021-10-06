@@ -32,8 +32,7 @@ module.exports = {
      * Use `prettier` to override default formatting related rules
      * See https://github.com/prettier/eslint-config-prettier
      */
-    'prettier',
-    'prettier/@typescript-eslint',
+     'plugin:prettier/recommended'
   ],
 
   rules: {

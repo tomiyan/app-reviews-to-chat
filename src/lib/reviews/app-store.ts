@@ -222,7 +222,7 @@ export class AppStore {
       this.state.markReviewAsPublished(this.appStoreConf.appId, review.id);
     } else {
       if (this.commonConf.verbose) {
-        console.log(`INFO: Review already published: ${review.text}`);
+        console.log(`INFO: Review already published: ${review.id} ${review.text}`);
       }
     }
   }

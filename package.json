@@ -1,6 +1,6 @@
 {
   "name": "app-reviews-to-chat",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Node.js library for posting App Store and Google Play app reviews to Slack.",
   "main": "./dist/lib/index.js",
   "bin": "./dist/bin/index.js",
@@ -39,29 +39,29 @@
   },
   "homepage": "https://github.com/tomiyan/app-reviews-to-chat#readme",
   "devDependencies": {
-    "@types/bent": "^7.3.0",
-    "@types/command-line-args": "^5.0.0",
-    "@types/node": "^14.10.2",
-    "@types/pg": "^7.14.4",
-    "@types/validator": "^13.1.0",
-    "@typescript-eslint/eslint-plugin": "^4.1.1",
-    "@typescript-eslint/parser": "^4.1.1",
-    "eslint": "^7.9.0",
-    "eslint-config-prettier": "^6.11.0",
+    "@types/bent": "^7.3.2",
+    "@types/command-line-args": "^5.2.0",
+    "@types/node": "^14.17.20",
+    "@types/pg": "^8.6.1",
+    "@types/validator": "^13.6.3",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-eslint-plugin": "^2.3.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.1.2",
-    "typescript": "^4.0.2"
+    "eslint-plugin-prettier": "^3.4.1",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3"
   },
   "dependencies": {
-    "android-versions": "^1.5.0",
-    "bent": "^7.3.10",
-    "command-line-args": "^5.1.1",
-    "google-play-scraper": "^8.0.2",
-    "googleapis": "^59.0.0",
-    "pg": "^8.3.3",
-    "pg-hstore": "^2.3.3",
-    "sequelize": "^6.3.5",
-    "source-map-support": "^0.5.19"
+    "android-versions": "^1.7.0",
+    "bent": "^7.3.12",
+    "command-line-args": "^5.2.0",
+    "google-play-scraper": "^8.0.4",
+    "googleapis": "^88.2.0",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5",
+    "source-map-support": "^0.5.20"
   }
 }
